@@ -1,4 +1,4 @@
-fetch("data/posts.json")
+fetch("./src/posts.json")
   .then(res => res.json())
   .then(data => {
     data.forEach(item => {
