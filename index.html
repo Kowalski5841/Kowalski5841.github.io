@@ -1,19 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>TXT by HTML5 UP</title>
+		<title>鸟窝</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="homepage is-preload">
+	<body class="homepage is-preload" style="height: 100vh; background-image: url('images/bg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<div class="logo container">`
-						<div>
-							<h1><a href="index.html" id="logo">😎</a></h1>
+					<div class="logo container">
+						<div >
+							<h1><a href="index.html" id="logo">
+							🐧
+							<!--	<img src="images/logo.png" alt="logo" style="height: 40px;" /> -->
+							</a></h1>
 							<p>爱和生命皆因脆弱而美丽，美丽在深不可测的不安于恐惧中薄如蝉翼。</p>
 						</div>
 					</div>
@@ -90,7 +93,7 @@
 												<div class="col-4 col-12-medium col-12-small">
 
 													<!-- Feature -->
-														<section class="box feature">
+														<section class="box feature" auto-bg="images/SKY_1.jpg">
 															<a href="#" class="image featured"><img src="images/SKY_1.jpg" alt="" /></a>
 															<h3><a href="#">与欧若拉的专属纪念</a></h3>
 															<p>
@@ -103,7 +106,7 @@
 												<div class="col-4 col-12-medium col-12-small">
 
 													<!-- Feature -->
-														<section class="box feature">
+														<section class="box feature" auto-bg="images/SKY_2.jpg">
 															<a href="#" class="image featured"><img src="images/SKY_2.jpg" alt="" /></a>
 															<h3><a href="#">光遇×小王子</a></h3>
 															<p>
@@ -116,7 +119,7 @@
 												<div class="col-4 col-12-medium col-12-small">
 
 													<!-- Feature -->
-														<section class="box feature">
+														<section class="box feature" auto-bg="images/SKY_3.jpg">
 															<a href="#" class="image featured"><img src="images/SKY_3.jpg" alt="" /></a>
 															<h3><a href="#">光遇×小王子</a></h3>
 															<p>
@@ -305,4 +308,46 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+    // 每个标题对象：text 是标题，weight 是权重
+    const titles = [
+      { text: "🐧鸟窝", weight: 30 },
+      { text: "🐧鸟笼", weight: 30 },
+      { text: "🐧鸟巢", weight: 30 },
+      { text: "🪽不会飞的鸟，打不破厚实的坚冰，只好用肚皮在茫茫的冰面上滑行。", weight: 9 },
+	  { text: "🐻‍❄企鹅被吃掉了，凶手是北极熊️。", weight: 1 }
+    ]
+
+    // 用权重随机选择标题的函数
+    function weightedRandomTitle(titles) {
+      const totalWeight = titles.reduce((sum, t) => sum + t.weight, 0)
+      const rand = Math.random() * totalWeight
+      let cumulative = 0
+      for (const t of titles) {
+        cumulative += t.weight
+        if (rand < cumulative) return t.text
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = weightedRandomTitle(titles)
+    })
+	
+	// 根据鼠标悬浮切换背景
+	let timeout;
+
+	document.querySelectorAll('.box.feature').forEach(function(item) {
+		item.addEventListener('mouseenter', function() {
+			const bg = this.getAttribute('auto-bg');
+
+			// 清除之前的延迟（防止中途切换时多个超时函数同时执行）
+			clearTimeout(timeout);
+
+			// 延迟执行背景切换，给过渡时间留一点空间
+			timeout = setTimeout(function() {
+				document.body.style.backgroundImage = `url('${bg}')`;
+			}, 200); // 延迟 200ms，让快速悬浮有缓冲时间
+		});
+	});
+  </script>
 </html>
