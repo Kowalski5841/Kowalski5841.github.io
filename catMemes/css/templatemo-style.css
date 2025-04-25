@@ -402,7 +402,7 @@ h5 {
     margin-top: 40px;
 }
 
-.subscribe-form #subscribe-email {
+.subscribe-form #searchInput {
     width: 100%;
     padding: 10px;
     background: transparent;
@@ -411,11 +411,15 @@ h5 {
 }
 
 @media screen and (max-width: 768px) {
-    .subscribe-form #subscribe-email {
+    .subscribe-form #searchInput {
         margin-bottom: 20px;
     }
 }
 
+#searchInput::placeholder {
+    color: grey; /* 喵~ 这是你想要的颜色，可以自由替换哟～ */
+    opacity: 1; /* 让颜色更清晰 */
+}
 
 .main-posts {
     position: relative;
@@ -442,8 +446,10 @@ h5 {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.9);
+    /*background: rgba(0,0,0,0.7);*/
     padding: 15px 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .post-masonry .post-thumb .title-over h4 {
@@ -463,7 +469,7 @@ h5 {
     left: 0;
     visibility: hidden;
     opacity: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.5);
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -ms-transition: all 150ms ease-in-out;
@@ -541,3 +547,12 @@ h5 {
 .copyright-text a {
     color: #bfbfbf;
 }
+/*让音乐标签转起来*/
+/*.rotate {*/
+/*    animation: spin 2s linear infinite;*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    0% { transform: rotate(0deg); }*/
+/*    100% { transform: rotate(360deg); }*/
+/*}*/
