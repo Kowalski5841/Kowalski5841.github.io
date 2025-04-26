@@ -48,7 +48,16 @@
                     <li><a href="#" class="fa fa-heart"></a></li>
                     <li><a href="#" class="fa fa-gift"></a></li>
                     <li><a href="../index.html" class="fa fa-home"></a></li>
-                    <li><a href="#" class="fa fa-music" id="music-toggle"></a></li>
+                    <li class="music-list-container">
+                        <a href="#" class="fa fa-music" id="nav-music-list"></a>
+                        <!-- 添加弹出层 -->
+                        <div class="music-list-popup">
+                            <h3>播放列表</h3>
+                            <div class="music-list">
+                                <!-- 音乐列表项会通过JavaScript动态添加 -->
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="https://github.com/Kowalski5841/Kowalski5841.github.io" class="fa fa-github"></a></li>
                 </ul>
             </div>
@@ -109,8 +118,29 @@
         </div>
     </div>
 </footer>
-<!-- 音频播放器 -->
+
+<!-- 原有的音频播放器 -->
 <audio id="music-player" src="../musics/open%20your%20eyes.mp3" preload="auto"></audio>
+
+<!-- 添加新的音乐控制器 -->
+<div class="music-controls">
+    <a href="#" class="fa fa-step-backward" id="prev-song" title="上一首"></a>
+    <a href="#" class="fa fa-play" id="music-toggle" title="播放/暂停"></a>
+    <a href="#" class="fa fa-step-forward" id="next-song" title="下一首"></a>
+    <span class="current-song-title"></span>
+</div>
+
+<!-- 在music-list标签后添加 -->
+<div class="music-list-popup">
+    <h3>播放列表</h3>
+    <div class="music-list">
+        <!-- 音乐列表项会通过JavaScript动态添加 -->
+    </div>
+</div>
+
+<!-- 底部控制器中的音乐列表按钮（如果有的话） -->
+<!-- <li><a href="#" class="fa fa-music" id="player-music-list"></a></li> -->
+
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script src="js/min/plugins.min.js"></script>
 <script src="js/min/main.min.js"></script>
