@@ -1,74 +1,90 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Masonry Responsive Template</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <!-- 
-        Masonry Template 
-        http://www.templatemo.com/preview/templatemo_434_masonry
-        -->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Masonry Responsive Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div id="loader-wrapper">
-                <div id="loader"></div>
-            </div>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--
+    Masonry Template
+    http://www.templatemo.com/preview/templatemo_434_masonry
+    -->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-            <div class="content-bg"></div>
-            <div class="bg-overlay"></div>
-
-            <!-- SITE TOP -->
-            <div class="site-top">
-                <div class="site-header clearfix">
-                    <div class="container">
-                        <a href="#" class="site-brand pull-left"><strong>猫Memes</strong> 大赏</a>
-                        <div class="social-icons pull-right">
-<!--                        这个子工程的图标是这个网站的: https://fontawesome.com/v4/icons/    cons -->
-<ul>
-    <li><a href="#" class="fa fa-heart"></a></li>
-    <li><a href="#" class="fa fa-gift"></a></li>
-    <li><a href="#" class="fa fa-camera"></a></li>
-    <li><a href="#" class="fa fa-music"></a></li>
-    <li><a href="#" class="fa fa-github"></a></li>
-</ul>
+<div id="loader-wrapper">
+    <div id="loader"></div>
 </div>
-</div>
-</div> <!-- .site-header -->
-<div class="site-banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8 text-center">
-                <h2>猫Memes是这些猫伪装自己邪恶计划的 <span class="blue">面子工程</span><span class="yellow">😼：是的，</span></h2>
-                <p>这只是我们的一小步，对，就是这样，让两脚羊陷入对我们的嘲弄和讥笑，然后秘密的进行我们的统治计划...在这之前，可以先给我倒点罐头吗🥫？</p>
+
+<div class="content-bg"></div>
+<div class="bg-overlay"></div>
+
+<!-- SITE TOP -->
+<div class="site-top">
+    <div class="site-header clearfix">
+        <div class="container">
+            <a href="#" class="site-brand pull-left"><strong>猫Memes</strong> 大赏</a>
+            <div class="social-icons pull-right">
+                <!--                        这个子工程的图标是这个网站的: https://fontawesome.com/v4/icons/    cons -->
+                <ul>
+                    <li><a href="#" class="fa fa-heart"></a></li>
+                    <li><a href="#" class="fa fa-gift"></a></li>
+                    <li><a href="../index.html" class="fa fa-home"></a></li>
+                    <li class="music-list-container">
+                        <a href="#" class="fa fa-music" id="nav-music-list"></a>
+                        <!-- 添加弹出层 -->
+                        <div class="music-list-popup">
+                            <h3>播放列表</h3>
+                            <div class="music-list">
+                                <!-- 音乐列表项会通过JavaScript动态添加 -->
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="https://github.com/Kowalski5841/Kowalski5841.github.io" class="fa fa-github"></a></li>
+                </ul>
             </div>
         </div>
-        <div class="row">
-            <form action="#" method="post" class="subscribe-form">
-                <fieldset class="col-md-offset-4 col-md-3 col-sm-8">
-                    <input type="email" id="subscribe-email" placeholder="告诉猫主教，今天想要哪只...">
-                </fieldset>
-                <fieldset class="col-md-5 col-sm-4">
-                    <input type="submit" id="subscribe-submit" class="button white" value="找到它！">
-                </fieldset>
-            </form>
+    </div> <!-- .site-header -->
+    <div class="site-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center">
+                    <h2>猫Memes是这些猫伪装自己邪恶计划的 <span class="blue">面子工程</span><span
+                            class="yellow">😼：是的，</span></h2>
+                    <p>
+                        这只是我们的一小步，对，就是这样，让两脚羊陷入对我们的嘲弄和讥笑，然后秘密的进行我们的统治计划...在这之前，可以先给我倒点罐头吗🥫？</p>
+                </div>
+            </div>
+            <div class="row">
+                <form action="#" method="post" class="subscribe-form">
+                    <fieldset class="col-md-offset-4 col-md-3 col-sm-8">
+                        <input type="text" id="searchInput" placeholder="告诉猫主教，今天想要哪只...">
+                    </fieldset>
+                    <fieldset class="col-md-5 col-sm-4">
+                        <input type="submit" id="searchBtn" class="button white" value="找到它！">
+                    </fieldset>
+                </form>
+            </div>
         </div>
-    </div>
-</div> <!-- .site-banner -->
+    </div> <!-- .site-banner -->
 </div> <!-- .site-top -->
 
 <!-- MAIN POSTS -->
@@ -87,9 +103,9 @@
                     <ul>
                         <li><a href="#" class="fa fa-heart"></a></li>
                         <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-camera"></a></li>
-                        <li><a href="#" class="fa fa-music"></a></li>
-                        <li><a href="#" class="fa fa-github"></a></li>
+                        <li><a href="../index.html" class="fa fa-home"></a></li>
+                        <li><a href="https://github.com/Kowalski5841/Kowalski5841.github.io" class="fa fa-github"></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -98,68 +114,91 @@
             <div class="col-md-12 text-center">
                 <p class="copyright-text">Copyright &copy; 2084 Company Name
                     | Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a></p>
-                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/min/plugins.min.js"></script>
-    <script src="js/min/main.min.js"></script>
-    <script src="js/generatePost.js"></script>
-    <!-- Preloader -->
-    <script type="text/javascript">
-            //<![CDATA[
-            $(window).load(function() { // makes sure the whole site is loaded
-                $('#loader').fadeOut(); // will first fade out the loading animation
-                    $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-                    $('body').delay(350).css({'overflow-y':'visible'});
-                })
-            //]]>
-            </script>
-            <!-- templatemo 434 masonry -->
-        </body>
-        </html>
-        <!-- 下面的脚本是用来本地文件系统测试的。 -->
-        <!-- <script id="postData" type="application/json">
-            [
-              {
-                "img": "images/1.jpg",
-                "title": "Title one goes here",
-                "date": "25 Jan 2084",
-                "desc": "Cum sociis natoque penatibus et magnis dis parturient"
-            },
-            {
-                "img": "images/2.jpg",
-                "title": "Second Image Title",
-                "date": "24 Jan 2084",
-                "desc": "Donec venenatis libero sapien, eu condimentum lacus"
-            }
-        ]
-    </script>
-    <script>
-      const postData = JSON.parse(document.getElementById("postData").textContent)
-      const container = document.getElementById("post-container")
+<!-- 原有的音频播放器 -->
+<audio id="music-player" src="../musics/open%20your%20eyes.mp3" preload="auto"></audio>
 
-      postData.forEach(post => {
-        const html = `
-      <div class="post-masonry col-md-4 col-sm-6">
-        <div class="post-thumb">
-          <img src="${post.img}" alt="">
-          <div class="title-over">
-            <h4><a href="#">${post.title}</a></h4>
-          </div>
-          <div class="post-hover text-center">
-            <div class="inside">
-              <i class="fa fa-plus"></i>
-              <span class="date">${post.date}</span>
-              <h4><a href="#">${post.title}</a></h4>
-              <p>${post.desc}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        `
-        container.insertAdjacentHTML("beforeend", html)
+<!-- 添加新的音乐控制器 -->
+<div class="music-controls">
+    <a href="#" class="fa fa-step-backward" id="prev-song" title="上一首"></a>
+    <a href="#" class="fa fa-play" id="music-toggle" title="播放/暂停"></a>
+    <a href="#" class="fa fa-step-forward" id="next-song" title="下一首"></a>
+    <span class="current-song-title"></span>
+</div>
+
+<!-- 在music-list标签后添加 -->
+<div class="music-list-popup">
+    <h3>播放列表</h3>
+    <div class="music-list">
+        <!-- 音乐列表项会通过JavaScript动态添加 -->
+    </div>
+</div>
+
+<!-- 底部控制器中的音乐列表按钮（如果有的话） -->
+<!-- <li><a href="#" class="fa fa-music" id="player-music-list"></a></li> -->
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/min/plugins.min.js"></script>
+<script src="js/min/main.min.js"></script>
+<script src="js/posts.js"></script>
+<script src="js/musicControl.js"></script>
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () { // makes sure the whole site is loaded
+        $('#loader').fadeOut(); // will first fade out the loading animation
+        $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow-y': 'visible'});
     })
+    //]]>
+</script>
+<!-- templatemo 434 masonry -->
+</body>
+</html>
+<!-- 下面的脚本是用来本地文件系统测试的。 -->
+<!-- <script id="postData" type="application/json">
+    [
+      {
+        "img": "images/1.jpg",
+        "title": "Title one goes here",
+        "date": "25 Jan 2084",
+        "desc": "Cum sociis natoque penatibus et magnis dis parturient"
+    },
+    {
+        "img": "images/2.jpg",
+        "title": "Second Image Title",
+        "date": "24 Jan 2084",
+        "desc": "Donec venenatis libero sapien, eu condimentum lacus"
+    }
+]
+</script>
+<script>
+const postData = JSON.parse(document.getElementById("postData").textContent)
+const container = document.getElementById("post-container")
+
+postData.forEach(post => {
+const html = `
+<div class="post-masonry col-md-4 col-sm-6">
+<div class="post-thumb">
+  <img src="${post.img}" alt="">
+  <div class="title-over">
+    <h4><a href="#">${post.title}</a></h4>
+  </div>
+  <div class="post-hover text-center">
+    <div class="inside">
+      <i class="fa fa-plus"></i>
+      <span class="date">${post.date}</span>
+      <h4><a href="#">${post.title}</a></h4>
+      <p>${post.desc}</p>
+    </div>
+  </div>
+</div>
+</div>
+`
+container.insertAdjacentHTML("beforeend", html)
+})
 </script> 
